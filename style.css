@@ -48,7 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
 	transition-duration: 50ms;
 }
@@ -1360,7 +1360,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: "DM Sans", sans-serif;
+	font-family: "Playfair Display", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -1371,14 +1371,14 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Raleway", sans-serif;
+	font-family: "Lora", serif;
 	clear: both;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 }
 
 p {
-	font-family: "DM Sans", sans-serif;
+	font-family: "Playfair Display", sans-serif;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 }
@@ -1414,18 +1414,18 @@ h5, .h5_accordeon {
 }
 
 h6, .h6 {
-	font-family: "Raleway", sans-serif;
+	font-family: "Lora", serif;
 	font-size: 1rem;
 	line-height: 1.7;
 }
 
 a {
-	font-family: "Raleway", sans-serif;
+	font-family: "Lora", serif;
 	text-decoration: none;
 }
 
 p {
-	font-family: "DM Sans", sans-serif;
+	font-family: "Playfair Display", sans-serif;
 	font-size: 1rem;
 	line-height: 1.7;
 	margin-bottom: 1rem;
@@ -1498,7 +1498,6 @@ big {
 }
 
 body {
-	background: #fafaf4;
 	overflow-x: hidden !important;
 }
 
@@ -1510,7 +1509,7 @@ body {
 }
 
 body.page-template {
-	border: 1.5rem solid #000000;
+	border: 1.5rem solid;
 }
 
 main {
