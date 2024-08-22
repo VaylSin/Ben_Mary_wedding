@@ -1,0 +1,186 @@
+html {
+	@media screen and (max-width: 768px){
+		font-size: 82%;
+	}
+}
+body {
+	background: map-get($map: $colors, $key: light);
+	overflow-x: hidden !important;
+	// border: 2rem solid black; // Fallback for when there is no custom background color defined.
+	&.px-3 {
+		@media screen and (max-width: 768px) {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+	&.page-template {
+        border: 1.5rem solid map-get($map: $colors, $key: black);
+	}
+}
+main {
+	gap: 1rem;
+}
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+
+}
+.text-center {
+	text-align: center;
+}
+.text-end {
+	text-align: end;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.d-none-desktop {
+	display: block ;
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+.d-none-mobile {
+	display: none;
+	@media screen and (min-width: 768px) {
+		display: block !important;
+	}
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.pic-rounded {
+	img {
+		border-radius: 50%;
+	}
+}
+@for $i from 1 through 5 {
+	.gap-#{$i} {
+		gap: $i * 1rem;
+		@media screen and (max-width: 768px) {
+			gap: 1rem;
+		}
+	}
+}
+@each $name, $size in $breakpoints {
+    .container_#{$name} {
+        max-width: $size ;
+        margin: 0 auto;
+        position: relative;
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+// Gestion des padding
+@for $i from 1 through length($padding-sizes) {
+	.py-#{nth($padding-sizes, $i)} {
+		padding-top: ( nth($padding-sizes, $i) / 2) * 1rem;
+		padding-bottom: ( nth($padding-sizes, $i) / 2)* 1rem;
+	}
+	.px-#{nth($padding-sizes, $i)} {
+		padding-left: ( nth($padding-sizes, $i) / 2) * 1rem;
+		padding-right: ( nth($padding-sizes, $i) / 2) * 1rem;
+	}
+	.p-#{nth($padding-sizes, $i)} {
+		padding: ( nth($padding-sizes, $i) / 2) * 1rem;
+	}
+	.pt-#{nth($padding-sizes, $i)} {
+		padding-top: ( nth($padding-sizes, $i) / 2) * 1rem;
+	}
+	.pb-#{nth($padding-sizes, $i)} {
+		padding-bottom: ( nth($padding-sizes, $i) / 2) * 1rem;
+	}
+	.pl-#{nth($padding-sizes, $i)} {
+		padding-left: ( nth($padding-sizes, $i) / 2) * 1rem;
+	}
+	.pr-#{nth($padding-sizes, $i)} {
+		padding-right: ( nth($padding-sizes, $i) / 2) * 1rem;
+	}
+}
+
+// Gestion des marges
+@for $i from 1 through length($margin-sizes) {
+	.mx-#{nth($margin-sizes, $i)} {
+		margin-left: (nth($margin-sizes, $i) / 2) * 1rem;
+		margin-right: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+	.my-#{nth($margin-sizes, $i)} {
+		margin-top: (nth($margin-sizes, $i) / 2) * 1rem;
+		margin-bottom: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+	.m-#{nth($margin-sizes, $i)} {
+		margin: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+	.mt-#{nth($margin-sizes, $i)} {
+		margin-top: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+	.mb-#{nth($margin-sizes, $i)} {
+		margin-bottom: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+	.ml-#{nth($margin-sizes, $i)} {
+		margin-left: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+	.mr-#{nth($margin-sizes, $i)} {
+		margin-right: (nth($margin-sizes, $i) / 2) * 1rem;
+	}
+}
+.m-auto {
+	margin: auto;
+}
+
+
+
+// Système de colonnes
+
+
+
+@each $breakpoint, $min-width in $breakpoints {
+	@media (min-width: $min-width) {
+			@for $i from 1 through $grid-columns {
+			.col-#{$breakpoint}-#{$i} {
+				flex: 0 0 (100% / $grid-columns) * $i;
+				max-width: (100% / $grid-columns) * $i;
+
+			}
+			
+		}
+	}
+	@media screen and (max-width: 768px) {
+		@for $i from 1 through $grid-columns {
+			.col-#{$breakpoint}-#{$i} {
+			flex: 0 0 100%;
+			max-width: 100%;
+			}
+		}
+	}
+}
+// Gestion de align-items
+@each $value in $align-items-values {
+	.align-items-#{$value} {
+		align-items: $value;
+	}
+}
+
+// Gestion de justify-content
+@each $value in $justify-content-values {
+	.content-#{$value} {
+		justify-content: #{$value} ;
+	}
+}
