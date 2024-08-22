@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');// titres Raleway et paragraphes DM Sans
+
+
+// stylelint-disable value-keyword-case
+$font_title: "Raleway", sans-serif;
+$font__main: "DM Sans", sans-serif;
+// stylelint-enable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$link-decoration: none;
+
+
+// Fonction pour calculer la taille de police en vw
+@function calculateFontSize($targetSize, $baseSize: $default-font-size) {
+  @return ($targetSize / $baseSize) * 1vw;
+}
+
+// Mixin pour générer les règles de taille de police responsive
+@mixin responsiveFontSize($targetSize) {
+    font-size: calculateFontSize($targetSize);
+
+@each $breakpoint, $min-width in $breakpoints {
+        @media (min-width: $min-width) {
+        font-size: calculateFontSize($targetSize);
+        }
+    }
+}
