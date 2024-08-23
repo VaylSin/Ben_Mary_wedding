@@ -1,0 +1,151 @@
+{
+    "key": "group_667eb622ad0f8",
+    "title": "AOS configuration",
+    "fields": [
+        {
+            "key": "field_667eb83967462",
+            "label": "Activer les animations au scroll ?",
+            "name": "activate_animation",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "activer",
+            "ui_off_text": "désactiver"
+        },
+        {
+            "key": "field_667eb85a67463",
+            "label": "Réglages",
+            "name": "reglages",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_667eb83967462",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_667eb91a67464",
+                    "label": "Type d'animation",
+                    "name": "type_danimation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fade-up": "Fade up",
+                        "fade-down": "Fade Down",
+                        "fade-left": "Fade Left",
+                        "fade-right": "Fade Right",
+                        "flip-up": "Flip Up",
+                        "flip-down": "Flip Down",
+                        "flip-left": "Flip Left",
+                        "flip-right": "Flip Right",
+                        "slide-up": "Slide Up",
+                        "slide-down": "Slide Down",
+                        "slide-left": "Slide Left",
+                        "slide-right": "Slide Right",
+                        "zoom-in": "Zoom in",
+                        "zoom-in-up": "Zoom in up",
+                        "zoom-in-down": "Zoom in down",
+                        "zoom-in-left": "Zoom in left",
+                        "zoom-in-right": "Zoom in right",
+                        "zoom-out": "Zoom out",
+                        "zoom-out-up": "Zoom out up",
+                        "zoom-out-down": "Zoom out down",
+                        "zoom-out-left": "Zoom out left",
+                        "zoom-out-right": "Zoom out right"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_667eba9c67465",
+                    "label": "Durée de l'animation",
+                    "name": "duree_de_lanimation",
+                    "type": "text",
+                    "instructions": "En millisecondes",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 400,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_667ebade67466",
+                    "label": "Délai de déclenchement",
+                    "name": "delai",
+                    "type": "text",
+                    "instructions": "En millisecondes, à utiliser seulement si on a plusieurs itérations d'un bloc, afin de décaler pour chacun le début de l'animation",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_status",
+                "operator": "==",
+                "value": "request-failed"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1720012594
+}

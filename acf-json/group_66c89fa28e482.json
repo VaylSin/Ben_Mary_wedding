@@ -1,0 +1,266 @@
+{
+    "key": "group_66c89fa28e482",
+    "title": "Homepage",
+    "fields": [
+        {
+            "key": "field_66c89fc9bedf8",
+            "label": "Section visuelle \"haut du site\"",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66c89ff7fbd53",
+            "label": "Image de fond",
+            "name": "image_de_fond",
+            "type": "image",
+            "instructions": "Ici on définira l'image qui servira de fond sur toute la partie haute de la page d'accueil",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,webpp"
+        },
+        {
+            "key": "field_66c8a183fbd54",
+            "label": "Texte au centre de la page",
+            "name": "texte_au_centre_de_la_page",
+            "type": "wysiwyg",
+            "instructions": "Concrètement la sone de texte qui sera au centre de la photo, comme énormément de sites modernes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_66c8a21ffbd55",
+            "label": "Section \"Notre histoire\"",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66c8a26bfbd56",
+            "label": "Activer l'encart ?",
+            "name": "activer_lencart",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_66c8a289fbd57",
+            "label": "Phrase de presentation",
+            "name": "phrase_de_presentation",
+            "type": "text",
+            "instructions": "Exemple : \"Découvrez comment tout a commencé\"\r\nAvec un bouton qui renverra sur une petite page crée au préalable avec des photos etc... bref votre histoire quoi, à votre convenance",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c8a26bfbd56",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Découvrez comment tout a commencé",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_66c8a2d2fbd58",
+            "label": "Texte du bouton",
+            "name": "texte_du_bouton",
+            "type": "text",
+            "instructions": "Ce que vous voulez mettre sur le bouton qui permettra d'accéder a la page \"notre histoire\"",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c8a26bfbd56",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_66c8a33f6c19d",
+            "label": "Section \"Vers la reservation\"",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66c8a3536c19e",
+            "label": "Image de fond",
+            "name": "image_de_fond_resa",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_66c8a3c56c19f",
+            "label": "Phrase de presentation",
+            "name": "phrase_de_presentation_resa",
+            "type": "text",
+            "instructions": "Exemple : \"Nous espérons vous compter parmi nous !\"",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c8a26bfbd56",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Découvrez comment tout a commencé",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_66c8a3c86c1a0",
+            "label": "Texte du bouton",
+            "name": "texte_du_bouton_resa",
+            "type": "text",
+            "instructions": "exemple: \"confirmez votre venue\"",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c8a26bfbd56",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1724425242
+}

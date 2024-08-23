@@ -59,3 +59,19 @@ function mariage_ben_et_marie_customize_preview_js() {
 	wp_enqueue_script( 'mariage-ben-et-marie-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'mariage_ben_et_marie_customize_preview_js' );
+
+
+/**
+ * Add customizer options
+ */
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title' 	=> 'Réglages Globaux',
+        'menu_title'	=> 'Réglages Globaux',
+        'menu_slug' 	=> 'theme-general-settings',
+        'capability'	=> 'edit_posts',
+        'redirect'		=> false
+    ));
+
+}
