@@ -62,6 +62,43 @@
             "delay": 0
         },
         {
+            "key": "field_66c8bd2f0417e",
+            "label": "Contenu principal flexible",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66c8bd420417f",
+            "label": "Blocs de contenu flexible",
+            "name": "blocs_de_contenu_flexible",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_667abf29323a5"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
+        },
+        {
             "key": "field_66c8a21ffbd55",
             "label": "Section \"Notre histoire\"",
             "name": "",
@@ -197,15 +234,7 @@
             "type": "text",
             "instructions": "Exemple : \"Nous espérons vous compter parmi nous !\"",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c8a26bfbd56",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -224,15 +253,7 @@
             "type": "text",
             "instructions": "exemple: \"confirmez votre venue\"",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c8a26bfbd56",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -248,9 +269,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "post"
+                "value": "14"
             }
         ]
     ],
@@ -259,8 +280,15 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "",
-    "modified": 1724425242
+    "modified": 1724431936
 }

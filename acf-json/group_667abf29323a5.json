@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_66798a9007992",
-            "label": "Section flexibles multicontenu",
+            "label": "Blocs de contenu flexibles",
             "name": "bloc_image__texte",
             "type": "flexible_content",
             "instructions": "",
@@ -19,7 +19,7 @@
                 "layout_66798aa679803": {
                     "key": "layout_66798aa679803",
                     "name": "bloc_photo__texte",
-                    "label": "Section Photo + texte à droite",
+                    "label": "Photo + texte à droite",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -187,7 +187,7 @@
                 "layout_66c48a3664f10": {
                     "key": "layout_66c48a3664f10",
                     "name": "bloc_spacer",
-                    "label": "Bloc Spacer",
+                    "label": "Bloc d'espacement ",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -218,7 +218,7 @@
                 "layout_667991c0a7bb2": {
                     "key": "layout_667991c0a7bb2",
                     "name": "bloc_texte__photo",
-                    "label": "Section texte à gauche + photo à droite",
+                    "label": "Texte à gauche + photo à droite",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -386,7 +386,7 @@
                 "layout_66c5f27da5259": {
                     "key": "layout_66c5f27da5259",
                     "name": "bloc_texte__carousel",
-                    "label": "Section texte à gauche + carousel photos",
+                    "label": "Texte à gauche + carrousel photos",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -557,7 +557,7 @@
                 "layout_66c7097259ecb": {
                     "key": "layout_66c7097259ecb",
                     "name": "bloc_carousel__texte",
-                    "label": "Section carousel photos + texte à droite",
+                    "label": "Carousel de photos + texte à droite",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -728,7 +728,7 @@
                 "layout_66c497c810b23": {
                     "key": "layout_66c497c810b23",
                     "name": "bloc_photo_single",
-                    "label": "Section photo simple",
+                    "label": "Photo simple",
                     "display": "table",
                     "sub_fields": [
                         {
@@ -809,7 +809,7 @@
                 "layout_667a8509b6614": {
                     "key": "layout_667a8509b6614",
                     "name": "bloc_photo_rounded__text_block",
-                    "label": "Section avec photo arrondie + texte en dessous",
+                    "label": "Photo arrondie + texte en dessous",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -977,7 +977,7 @@
                 "layout_667a965c9e97d": {
                     "key": "layout_667a965c9e97d",
                     "name": "banderole_images_statiques",
-                    "label": "Bannière Images statiques x 2-6",
+                    "label": "Bannière d'images ",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -1033,7 +1033,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Ajouter une section",
+            "button_label": "Ajouter un bloc",
             "min": 0,
             "max": 10
         }
@@ -1041,9 +1041,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "14"
+                "value": "post_format"
             }
         ]
     ],
@@ -1055,5 +1055,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1724424089
+    "modified": 1724431653
 }
