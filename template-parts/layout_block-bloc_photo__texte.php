@@ -9,8 +9,8 @@ $dataAosText = ''; // Initialisation avec une chaîne vide
             data-aos-duration="' . $aos_args['duration_texte'] . '"
             data-aos-delay="' . $aos_args['delay_texte'] . '"';
     }
-    echo '<div class="block_pics-text d-flex align-items-center my-10">';
-        echo '<div class="block_pics col-md-7" >';
+    echo '<div class="block_pics-text d-flex align-items-center ">';
+        echo '<div class="block_pics d-flex content-start col-md-7" >';
             $image = get_sub_field('photo');
                 if( $image ) {
                     echo '<img src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" '.$dataAosImage.'>';
@@ -18,17 +18,5 @@ $dataAosText = ''; // Initialisation avec une chaîne vide
         echo '</div>';
         echo '<div class="block_text col-md-5 px-6" '.$dataAosText.'>';
             the_sub_field('contenu_texte');
-                if( have_rows('details_boutons') ):
-                    while( have_rows('details_boutons') ): the_row();
-                        if( get_sub_field('texte_bouton') ):
-                            $buttonText = '<button class="button-52" role="button">';
-                            $buttonText .= '<a href="'.get_sub_field('lien_du_bouton').'" class="btn2">'.get_sub_field('texte_bouton').'</a>';
-                            $buttonText .= '</button>';
-                        endif;
-                        if (isset($buttonText)) {
-                            echo $buttonText;
-                        }
-                    endwhile;
-                endif;
         echo '</div>';
     echo '</div>';

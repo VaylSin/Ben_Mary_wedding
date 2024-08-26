@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: mariage ben et marie
 Theme URI: http://underscores.me/
@@ -1377,35 +1378,36 @@ h6 {
 	margin-bottom: 0.5rem;
 }
 
-p {
-	font-family: "Playfair Display", sans-serif;
-	margin-top: 0;
-	margin-bottom: 0.5rem;
-}
-
 h1, .h1 {
-	font-size: 2.5rem;
+	font-size: calc((3.5 - 1) * 1.2vw + 1rem);
 	line-height: 1.2;
 }
 
 h2, .h2 {
-	font-size: 2rem;
+	font-size: calc((3 - 1) * 1.2vw + 1rem);
 	line-height: 1.3;
+	font-weight: 100;
+	margin-bottom: 5rem;
 }
 
 h3, .h3 {
-	font-size: 1.75rem;
+	font-size: calc((1.75 - 1) * 1.2vw + 1rem);
 	line-height: 1.4;
 }
 
+.main-navigation h3 {
+	margin-bottom: 0;
+	color: #FAF3E0;
+}
+
 h4, .h4 {
-	font-size: 1.5rem;
+	font-size: calc((1.5 - 1) * 1.2vw + 1rem);
 	line-height: 1.5;
 	font-weight: normal;
 }
 
 h5, .h5_accordeon {
-	font-size: 1.25rem;
+	font-size: calc((1.25 - 1) * 1.2vw + 1rem);
 	line-height: 1.6;
 	font-weight: normal;
 	border-top: 1px solid #666;
@@ -1426,7 +1428,7 @@ a {
 
 p {
 	font-family: "Playfair Display", sans-serif;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	line-height: 1.7;
 	margin-bottom: 1rem;
 }
@@ -1498,6 +1500,7 @@ big {
 }
 
 body {
+	background-color: #dfe0e1;
 	overflow-x: hidden !important;
 }
 
@@ -1506,10 +1509,6 @@ body {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
-}
-
-body.page-template {
-	border: 1.5rem solid;
 }
 
 main {
@@ -1569,6 +1568,10 @@ main {
 	}
 }
 
+.fixed {
+	position: fixed;
+}
+
 .relative {
 	position: relative;
 }
@@ -1579,6 +1582,11 @@ main {
 
 .pic-rounded img {
 	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+	object-position: left;
 }
 
 .gap-1 {
@@ -3790,6 +3798,10 @@ img {
 	max-width: 100%;
 }
 
+.block_pics img {
+	max-height: 50rem;
+}
+
 figure {
 	margin: 1em 0;
 }
@@ -3853,6 +3865,34 @@ input[type="submit"]:focus {
 	border-color: #aaa #bbb #bbb;
 }
 
+.btn-confirm-coming {
+	background-color: #B76E79;
+	color: #FAF3E0;
+	border: 1px solid #B76E79;
+	transition: .2s;
+}
+
+.btn-confirm-coming:hover {
+	background-color: #96a79a;
+	border: 1px solid #96a79a;
+}
+
+.history_title a {
+	font-size: 1.5rem;
+}
+
+.ornements_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* Centrer les éléments horizontalement */
+}
+
+.ornements_container hr {
+	background-color: black;
+	width: 22rem;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -3905,14 +3945,43 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+header {
+	width: 100%;
+	height: 100vh;
+}
+
+header .backgroundCss_filter {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .header-main__text {
+	color: white;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+.menu_fixed_to_sticky {
+	z-index: 1;
+}
+
 .main-navigation {
-	display: block;
-	width: 100%;
+	display: flex;
+	width: calc(100vw - 1rem);
+	justify-content: space-between;
+	align-items: center;
+	height: 6.25rem;
+}
+
+.main-navigation.sticky_menu {
+	position: fixed;
+	height: 5.25rem;
+	background-color: black;
+	box-shadow: -1px 21px 50px -16px rgba(255, 255, 255, 0.81);
 }
 
 .main-navigation ul {
@@ -3953,11 +4022,13 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	margin-right: 1rem;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: #FAF3E0;
 }
 
 /* Small menu. */

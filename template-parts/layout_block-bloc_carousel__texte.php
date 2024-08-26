@@ -11,7 +11,7 @@
             data-aos-duration="' . $aos_args['duration_texte'] . '"
             data-aos-delay="' . $aos_args['delay_texte'] . '"';
     }
-    echo '<div class="block_text-pics d-flex align-items-center my-12">';
+    echo '<div class="block_text-pics d-flex align-items-center">';
         echo '<div class="block_pics col-md-6 " >';
             if( $images ): ?>
                 <div id="masonry-grid" class="grid">

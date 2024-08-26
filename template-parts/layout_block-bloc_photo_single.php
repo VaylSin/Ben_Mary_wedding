@@ -11,7 +11,7 @@ $imagePosition = get_sub_field('position_image');
             data-aos-duration="' . $aos_args['duration_texte'] . '"
             data-aos-delay="' . $aos_args['delay_texte'] . '"';
     }
-    echo '<div class="block_pic-single d-flex '.$imagePosition.' align-items-center my-10">';
+    echo '<div class="block_pic-single d-flex '.$imagePosition.' align-items-center ">';
         echo '<div class="block_pics col-md-7" >';
             $image = get_sub_field('photo');
                 if( $image ) {

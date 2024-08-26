@@ -1,4 +1,3 @@
 <?php
-
-$height = $args['hauteur'];
-echo '<div class="spacer_div" style="height: '. $height.'px;"></div>';
+$height_rem = $args['hauteur'] / 16;
+echo '<div class="spacer_div" style="height: '. $height_rem.'rem;"></div>';

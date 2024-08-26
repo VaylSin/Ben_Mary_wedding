@@ -18,24 +18,40 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="robots" content="noindex">
 
-
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mariage-ben-et-marie' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<?php
+$backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . ');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;"';
+?>
+<div class="menu_fixed_to_sticky absolute">
+	<nav id="site-navigation" class="main-navigation px-4">
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mariage-ben-et-marie' ); ?></button>
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			)
+		);
+		?>
+		<h3>B&M 07.06.2025</h3>
+		<a href="<?php the_permalink(16);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right" data-aos-duration="750" data-aos-delay="1500">Confirmez votre venue</a>
+	</nav><!-- #site-navigation -->
+</div>
+<header id="masthead" class="site-header d-flex align-items-center" <?=$backgroundCss;?>>
+	<div class="absolute backgroundCss_filter" ></div>
+	<div class="container_full header-main__container">
+		<?php if(get_field('texte_au_centre_de_la_page')): 
+			echo '<div class="header-main__text" data-aos="zoom-in" data-aos-delay="1000">';
+				the_field('texte_au_centre_de_la_page');
+			echo '</div>';
+		endif; ?>
+	</div>
+
+</header><!-- #masthead -->

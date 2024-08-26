@@ -9,7 +9,11 @@ img {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.
 }
-
+.block_pics {
+	img {
+		max-height: 50rem;
+	}
+}
 figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }

@@ -96,7 +96,7 @@
             "display": "group",
             "layout": "block",
             "prefix_label": 0,
-            "prefix_name": 1
+            "prefix_name": 0
         },
         {
             "key": "field_66c8a21ffbd55",
@@ -290,5 +290,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1724431936
+    "modified": 1724689872
 }

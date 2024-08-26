@@ -106,79 +106,6 @@
                             "layout": "table",
                             "prefix_label": 0,
                             "prefix_name": 1
-                        },
-                        {
-                            "key": "field_66798e95ce9e7",
-                            "label": "Bouton Call to action",
-                            "name": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_66798eb9ce9e8",
-                            "label": "Détails boutons",
-                            "name": "details_boutons",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_66798ed3ce9e9",
-                                    "label": "Texte Bouton",
-                                    "name": "texte_bouton",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Découvrir",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_66798ee6ce9ea",
-                                    "label": "Lien du bouton",
-                                    "name": "lien_du_bouton",
-                                    "type": "page_link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 1,
-                                    "allow_archives": 0,
-                                    "multiple": 0
-                                }
-                            ]
                         }
                     ],
                     "min": "",
@@ -305,79 +232,6 @@
                             "layout": "table",
                             "prefix_label": 0,
                             "prefix_name": 1
-                        },
-                        {
-                            "key": "field_6679905bdcf85",
-                            "label": "Bouton Call to action",
-                            "name": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_6679905bdcf86",
-                            "label": "Détails boutons",
-                            "name": "details_boutons",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6679905bdcf87",
-                                    "label": "Texte Bouton",
-                                    "name": "texte_bouton",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Découvrir",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_6679905bdcf88",
-                                    "label": "Lien du bouton",
-                                    "name": "lien_du_bouton",
-                                    "type": "page_link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 1,
-                                    "allow_archives": 0,
-                                    "multiple": 0
-                                }
-                            ]
                         }
                     ],
                     "min": "",
@@ -476,79 +330,6 @@
                             "layout": "table",
                             "prefix_label": 0,
                             "prefix_name": 1
-                        },
-                        {
-                            "key": "field_66c5f27da525e",
-                            "label": "Bouton Call to action",
-                            "name": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_66c5f27da525f",
-                            "label": "Détails boutons",
-                            "name": "details_boutons",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_66c5f27da5260",
-                                    "label": "Texte Bouton",
-                                    "name": "texte_bouton",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Découvrir",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_66c5f27da5261",
-                                    "label": "Lien du bouton",
-                                    "name": "lien_du_bouton",
-                                    "type": "page_link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 1,
-                                    "allow_archives": 0,
-                                    "multiple": 0
-                                }
-                            ]
                         }
                     ],
                     "min": "",
@@ -647,79 +428,6 @@
                             "layout": "table",
                             "prefix_label": 0,
                             "prefix_name": 1
-                        },
-                        {
-                            "key": "field_66c7097259ed0",
-                            "label": "Bouton Call to action",
-                            "name": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_66c7097259ed1",
-                            "label": "Détails boutons",
-                            "name": "details_boutons",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_66c7097259ed2",
-                                    "label": "Texte Bouton",
-                                    "name": "texte_bouton",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Découvrir",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_66c7097259ed3",
-                                    "label": "Lien du bouton",
-                                    "name": "lien_du_bouton",
-                                    "type": "page_link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 1,
-                                    "allow_archives": 0,
-                                    "multiple": 0
-                                }
-                            ]
                         }
                     ],
                     "min": "",
@@ -896,79 +604,6 @@
                             "layout": "table",
                             "prefix_label": 0,
                             "prefix_name": 1
-                        },
-                        {
-                            "key": "field_667a8551b6617",
-                            "label": "Bouton Call to action",
-                            "name": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_667a8557b6618",
-                            "label": "Détails boutons",
-                            "name": "details_boutons",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_667a8557b6619",
-                                    "label": "Texte Bouton",
-                                    "name": "texte_bouton",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "Découvrir",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_667a8557b661a",
-                                    "label": "Lien du bouton",
-                                    "name": "lien_du_bouton",
-                                    "type": "page_link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 1,
-                                    "allow_archives": 0,
-                                    "multiple": 0
-                                }
-                            ]
                         }
                     ],
                     "min": "",
@@ -1055,5 +690,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1724431653
+    "modified": 1724690247
 }

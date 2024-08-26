@@ -4,11 +4,6 @@ Template Name: modèle de page standard
 */
 
 get_header();
-$images = get_field('slider_images');
-$video = get_field('incrustation_video');
-$container_name = $images ? 'slider_container' : 'video_container';
-$block_contact = get_field('afficher_bouton_contact');
-
 ?>
 // * @package mariage_ben_et_marie
 // */
@@ -16,11 +11,11 @@ $block_contact = get_field('afficher_bouton_contact');
 <main id="primary" class="site-main ">
     <section class="main_content">
         <div class="">
-            <div class="title_container container_xl my-4 text-center">
+            <div class="title_container container_xl  text-center">
                 <h1><?php the_title(); ?></h1>
             </div>
             <?php if( have_rows( 'bloc_image__texte' ) ): ?>
-            <div class="block_pics-text_container my-4 ">
+            <div class="block_pics-text_container  ">
                 <?php while ( have_rows( 'bloc_image__texte' ) ) : the_row();
                         $exclude_aos_text = array('banderole_images_statiques', 'prestations');
                         $aos_image = get_sub_field('animations_image') ? get_sub_field('animations_image') : [];
@@ -64,7 +59,7 @@ $block_contact = get_field('afficher_bouton_contact');
                             ];
                         }
                         $class_container = (get_row_layout() === 'banderole_images_statiques') ? null : 'container_xl';
-                        echo '<div class="'.$class_container.' my-4">';
+                        echo '<div class="'.$class_container.' ">';
                             get_template_part('template-parts/layout_block', get_row_layout(), $args);
                         echo '</div>';
                     ?>

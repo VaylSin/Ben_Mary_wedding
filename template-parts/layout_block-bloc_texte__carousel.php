@@ -11,7 +11,7 @@
             data-aos-duration="' . $aos_args['duration_texte'] . '"
             data-aos-delay="' . $aos_args['delay_texte'] . '"';
     }
-    echo '<div class="block_text-pics d-flex align-items-center my-12">';
+    echo '<div class="block_text-pics d-flex align-items-center ">';
         echo '<div class="block_text text-end col-md-6 px-6" '.$dataAosText.' >';
             the_sub_field('contenu_texte');
                 if( have_rows('details_boutons') ):
