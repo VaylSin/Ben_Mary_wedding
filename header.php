@@ -28,6 +28,7 @@ $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . 
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;"';
+
 ?>
 <div class="menu_fixed_to_sticky absolute">
 	<nav id="site-navigation" class="main-navigation px-4">

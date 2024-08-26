@@ -1,6 +1,11 @@
 <?php
 get_header($name = null);
 $activate_history = get_field('activer_lencart');
+$backgroundResaCss  = 'style="background-image: url(' . get_field('image_de_fond_resa') . ');
+    height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;"';
 ?>
 <main id="primary" class="site-main px-2">
     <section class="main_content">
@@ -64,18 +69,31 @@ $activate_history = get_field('activer_lencart');
     </section>
     <section class="history container_xl">
         <?php if($activate_history) :?>
-            <div class="history_container">
-                <div class="history_title text-center">
-                    <h2><?php the_field('phrase_de_presentation'); ?></h2>
-                    <div class="ornements_container">
-                        <hr>
-                        <a href="<?php the_permalink(26);?>" class="button btn-confirm-coming px-6 py-3"><?=the_field('texte_du_bouton');?></a>
-                        <hr>
-                    </div>
+        <div class="history_container my-14">
+            <div class="history_title text-center">
+                <h2><?php the_field('phrase_de_presentation'); ?></h2>
+                <div class="ornements_container">
+                    <hr>
+                    <a href="<?php the_permalink(26);?>" class="button btn-confirm-coming px-6 py-3"><?=the_field('texte_du_bouton');?></a>
+                    <hr>
                 </div>
-
             </div>
+
+        </div>
         <?php endif; ?>
+    </section>
+    <section class="container_full reservation_container">
+        <div class="d-flex align-items-center content-center" <?=$backgroundResaCss;?>>
+            <div class="absolute backgroundCss_filter"></div>
+            <div class=" ">
+                <?php if(get_field('phrase_de_presentation_resa')): 
+                    echo '<div class="resa_main_text flex-column gap-3" data-aos="zoom-in" data-aos-delay="1000">';
+                        echo '<p>'.get_field('phrase_de_presentation_resa').'</p>';
+                        echo' <a href="'.get_the_permalink(16).'" class="button btn-confirm-coming px-6 py-3">'.get_field('texte_du_bouton_resa').'</a>';
+                    echo '</div>';
+                endif; ?>
+            </div>
+        </div>
     </section>
 </main><!-- #main -->
 <?php

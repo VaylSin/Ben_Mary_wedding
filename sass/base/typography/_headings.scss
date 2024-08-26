@@ -77,4 +77,20 @@ p {
     @media screen and (max-width: 768px) {
         font-size: 1.2rem;
     }
+
+}
+.resa_main_text {
+    p {
+        color: white;
+        font-size: calc((5 - 1) * 1.2vw + 1rem);
+        margin: 0;
+    }
+    a {
+        text-align: center;
+        background-color: map-get($map: $colors, $key: sauge_green);
+        border: 1px solid map-get($map: $colors, $key: sauge_green);
+        color: black !important;
+        font-size: calc((2 - 1) * 1.2vw + 1rem);
+    }
+
 }
