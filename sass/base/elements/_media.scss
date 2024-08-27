@@ -8,7 +8,7 @@ object {
 img {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.
-	filter: saturate(0);
+	filter: saturate(0.35);
 }
 .block_pics {
 	img {

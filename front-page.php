@@ -4,7 +4,9 @@ global $activate_history ;
 $backgroundResaCss  = 'style="background-image: url(' . get_field('image_de_fond_resa') . ');
     height: 100%;
 	background-size: cover;
-	background-position: center;
+    background-attachment: fixed;
+	background-position: top center;
+    filter: saturate(0.5);
 	background-repeat: no-repeat;"';
 ?>
 <main id="primary" class="site-main px-2">
@@ -79,7 +81,8 @@ $backgroundResaCss  = 'style="background-image: url(' . get_field('image_de_fond
         </div>
         <?php endif; ?>
     </section>
-    <section class="container_full reservation_container">
+    <!-- container_full -->
+    <section class=" reservation_container">
         <div class="d-flex align-items-center text-center content-center" <?=$backgroundResaCss;?>>
             <div class="absolute backgroundCss_filter"></div>
             <div class=" ">

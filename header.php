@@ -23,16 +23,16 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<?php wp_body_open(); ?>
-	<?php
-	global $activate_history ;
-	$activate_history = get_field('activer_lencart');
-	$backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . ');
-		background-size: cover;
-		filter: saturate(0);
-		background-position: center;
-		background-repeat: no-repeat;"';
+<?php 
+wp_body_open();
+global $activate_history ;
+$activate_history = get_field('activer_lencart');
 
+$backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . ');
+	background-size: cover;
+	filter: saturate(0.5);
+	background-position: center;
+	background-repeat: no-repeat;"';
 ?>
 	<div class="menu_fixed_to_sticky absolute">
 		<nav id="site-navigation" class="main-navigation px-4">
@@ -64,7 +64,7 @@
 		</nav><!-- #site-navigation -->
 	</div>
 	<header id="title" class="site-header d-flex align-items-center" <?=$backgroundCss;?>>
-		<div class="absolute backgroundCss_filter"></div>
+		<!-- <div class="absolute backgroundCss_filter"></div> -->
 		<div class="container_full header-main__container">
 			<?php if(get_field('texte_au_centre_de_la_page')): 
 			echo '<div class="header-main__text" data-aos="zoom-in" data-aos-delay="1000">';
