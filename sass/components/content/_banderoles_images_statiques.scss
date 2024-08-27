@@ -1,0 +1,19 @@
+.static-banner {
+    background-color: map-get($map: $colors, $key: black);
+    padding: 1rem;
+    .block_pics {
+		flex-basis: 25%;
+		height: max-content;
+		img {
+			// height: 100%;
+            aspect-ratio: 4/3;
+			object-fit: cover;
+			width: 100%;
+			object-position: center;
+		}
+	}
+    @media screen and (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

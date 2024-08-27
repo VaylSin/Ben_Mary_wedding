@@ -80,17 +80,20 @@ p {
 
 }
 .resa_main_text {
+    width: 80%;
+    margin: 0 auto;
     p {
         color: white;
-        font-size: calc((5 - 1) * 1.2vw + 1rem);
+        font-size: calc((4 - 1) * 1.2vw + 1rem);
         margin: 0;
+        line-height: normal;
     }
     a {
         text-align: center;
         background-color: map-get($map: $colors, $key: sauge_green);
         border: 1px solid map-get($map: $colors, $key: sauge_green);
         color: black !important;
-        font-size: calc((2 - 1) * 1.2vw + 1rem);
+        font-size: calc((1.5 - 1) * 1.2vw + 1rem);
     }
 
 }
