@@ -29,6 +29,7 @@
 	$activate_history = get_field('activer_lencart');
 	$backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . ');
 		background-size: cover;
+		filter: saturate(0);
 		background-position: center;
 		background-repeat: no-repeat;"';
 
