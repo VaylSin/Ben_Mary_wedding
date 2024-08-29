@@ -139,11 +139,13 @@ add_action( 'widgets_init', 'mariage_ben_et_marie_widgets_init' );
  */
 function mariage_ben_et_marie_scripts() {
 	wp_enqueue_style( 'mariage-ben-et-marie-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'mariage-ben-et-marie-style', 'https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js', array(), _S_VERSION );
 	wp_style_add_data( 'mariage-ben-et-marie-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'mariage-ben-et-marie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'mariage-ben-et-marie-lightbox-js', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), true );
 	wp_enqueue_script( 'mariage-ben-et-marie-app', get_template_directory_uri() . '/js/app.js', array('jquery'), true );
+	wp_enqueue_script( 'mariage-ben-et-marie-sweet_alert', 'https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js', array('jquery'), true );
 	wp_enqueue_script( 'mariage-ben-et-marie-aos-js', get_template_directory_uri() . '/js/aos.js', array(), '1.0.0', true );
 
 

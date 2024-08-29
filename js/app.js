@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init();
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const mainNavigation = document.querySelector('.main-navigation');
         const scrolled = window.scrollY;
         const header = document.querySelector('header');
@@ -20,4 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
             mainNavigation.classList.remove('sticky_menu');
         }
     });
+    const presenceField = document.getElementById('acf-field_66d08675f56b6');
+    const messageField = document.getElementById('acf-field_66d07b83e9b18');
+    const validateMailField = document.querySelector('.acf-field--validate-email');
+    validateMailField.classList.add('d-none');
+
+    if (presenceField && messageField) {
+        const toggleFields = () => {
+            let nextElement = presenceField.closest('.acf-field').nextElementSibling;
+            while (nextElement) {
+                if (nextElement.contains(messageField)) {
+                    nextElement.style.display = 'block'; // Afficher le champ de commentaire message
+                } else {
+                    nextElement.style.display = presenceField.value === 'non' ? 'none' : 'block'; // Masquer ou afficher les autres éléments
+                }
+                nextElement = nextElement.nextElementSibling;
+            }
+        };
+        presenceField.addEventListener('change', toggleFields);
+
+        // Initialiser l'état en fonction de la valeur actuelle
+        toggleFields();
+    } else {
+        if (!presenceField) console.error('Presence field not found');
+        if (!messageField) console.error('Message field not found');
+    }
+
+
 });

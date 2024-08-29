@@ -1577,6 +1577,10 @@ main {
 	flex-wrap: wrap;
 }
 
+.d-none {
+	display: none !important;
+}
+
 .d-none-desktop {
 	display: block;
 }
@@ -3802,6 +3806,12 @@ main {
 	color: #B76E79;
 }
 
+.acf-field .acf-label label {
+	text-align: start;
+	font-size: 1.3rem;
+	font-weight: 100 !important;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -3998,11 +4008,18 @@ textarea {
 --------------------------------------------------------------*/
 header {
 	width: 100%;
-	height: 100vh;
 }
 
 header .header-main__text {
 	color: white;
+}
+
+header.site-header {
+	height: 100vh;
+}
+
+header.site-header-page {
+	height: 50vh;
 }
 
 .backgroundCss_filter {

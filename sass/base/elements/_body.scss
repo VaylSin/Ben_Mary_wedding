@@ -44,6 +44,9 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 }
+.d-none {
+	display: none !important;
+}
 .d-none-desktop {
 	display: block ;
 	@media screen and (min-width: 768px) {
@@ -206,6 +209,16 @@ main {
 		transition: .2s;
 		&:hover {
 			color: map-get($map: $colors, $key: gold_pink);
+		}
+	}
+}
+
+.acf-field {
+	.acf-label {
+		label {
+			text-align: start;
+			font-size: 1.3rem;
+    		font-weight: 100 !important;
 		}
 	}
 }
