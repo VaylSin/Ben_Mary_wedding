@@ -47,6 +47,7 @@ $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . 
 		// );
 		?>
 			<div class="menu-menu-1-container" >
+
 				<ul id="primary-menu" class="menu nav-menu">
 					<?php if ($activate_history) : ?>
 						<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116">
@@ -59,7 +60,7 @@ $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . 
 				</ul>
 			</div>
 			<a href="#title"><h3 >B&M 07.06.2025</h3></a>
-			<a href="<?php the_permalink(16);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right"
+			<a href="<?php the_permalink(259);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right"
 				data-aos-duration="750" data-aos-delay="1500">Confirmez votre venue</a>
 		</nav><!-- #site-navigation -->
 	</div>

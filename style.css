@@ -1622,6 +1622,10 @@ main {
 	object-position: left;
 }
 
+.form_container {
+	width: 100%;
+}
+
 .gap-1 {
 	gap: 1rem;
 }

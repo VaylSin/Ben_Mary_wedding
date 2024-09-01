@@ -61,76 +61,6 @@ function mariage_ben_et_marie_customize_preview_js() {
 add_action( 'customize_preview_init', 'mariage_ben_et_marie_customize_preview_js' );
 
 
-/**
- * Add customizer options
- */
-if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page(array(
-        'page_title' 	=> 'Réglages Globaux',
-        'menu_title'	=> 'Réglages Globaux',
-        'menu_slug' 	=> 'theme-general-settings',
-        'capability'	=> 'edit_posts',
-        'redirect'		=> false
-    ));
-
-}
-
-function cf7_create_post_invite_on_submit($contact_form) {
-	// Get the contact form object
-	$submission = WPCF7_Submission::get_instance();
-	if ($submission) {
-		$data = $submission->get_posted_data();
-		// var_dump($data);
-		// die();
-		$post_id = wp_insert_post(array(
-			'post_title' => sanitize_text_field($data['nom'] . ' ' . $data['prenom']),
-			'post_type' => 'invites',
-			'post_status' => 'publish'
-
-		));
-		if ($post_id) {
-			 error_log("Post ID créé : " . $post_id);
-			 // Débogage : Obtenez tous les champs ACF associés au post
-            $fields = get_fields(146);
-            if ($fields === false) {
-                error_log("Aucun champ ACF trouvé pour le post ID : " . $post_id);
-            } else {
-                error_log(print_r($fields, true)); // Affiche les champs dans le log pour vérification
-            }
-            // Parcourez les données du formulaire et mettez à jour les champs ACF
-            foreach ($data as $key => $value) {
-				// Vérifiez si le champ ACF existe avant de le mettre à jour
-                $field = get_field_object($key, $post_id);
-                // Vérifiez si le champ ACF existe avant de le mettre à jour
-                if ($field) {
-
-                    update_field($key, $value, $post_id);
-                } else {
-                    error_log(print_r("Champ ACF non trouvé : " . $key)).'<br>'; // Log si le champ n'est pas trouvé
-                }
-            }
-
-
-			// Générer un mot de passe aléatoire
-			$password = wp_generate_password(16, false);
-
-			// Crypter le mot de passe en MD5
-			$password_hashed = md5($password);
-
-			// Mettre à jour le champ ACF pour le mot de passe
-			update_field('mot_de_passe', $password_hashed, $post_id);
-
-			// Optionnel : Envoyer le mot de passe en clair à l'utilisateur par email
-            // $to = $data['your-email'];
-            // $subject = 'Votre mot de passe';
-            // $message = 'Votre mot de passe pour accéder à l\'espace de connexion est : ' . $password;
-            // wp_mail($to, $subject, $message);
-        }
-	}
-}
-// add_action('wpcf7_before_send_mail', 'cf7_create_post_invite_on_submit');
-
 // Hook pour générer et enregistrer un mot de passe hashé
 add_action('acf/save_post', 'generate_and_save_password', 20);
 function generate_and_save_password($post_id) {
@@ -159,7 +89,6 @@ function generate_and_save_password($post_id) {
 }
 
 
-
 // Ajouter des colonnes personnalisées
 function custom_guest_columns($columns) {
     $columns['adresse_email'] = 'Email';
@@ -172,13 +101,13 @@ add_filter('manage_edit-invites_columns', 'custom_guest_columns');
 // Remplir les colonnes personnalisées
 function custom_guest_column_content($column, $post_id) {
     switch ($column) {
-        case 'guest_name':
+        case 'adresse_email':
             echo get_post_meta($post_id, 'adresse_email', true);
             break;
-        case 'guest_email':
+        case 'presence':
             echo get_post_meta($post_id, 'presence', true);
             break;
-        case 'guest_rsvp':
+        case 'nb_personnes':
             echo get_post_meta($post_id, 'nb_personnes', true);
             break;
     }
@@ -202,15 +131,30 @@ function custom_guest_orderby($query) {
 
     $orderby = $query->get('orderby');
 
-  	if ('guest_email' == $orderby) {
+  	if ('adresse_email' == $orderby) {
         $query->set('meta_key', 'adresse_email');
         $query->set('orderby', 'meta_value');
-    } elseif ('guest_rsvp' == $orderby) {
+    } elseif ('presence' == $orderby) {
         $query->set('meta_key', 'presence');
         $query->set('orderby', 'meta_value');
-    } elseif ('guest_rsvp' == $orderby) {
+    } elseif ('nb_personnes' == $orderby) {
         $query->set('meta_key', 'nb_personnes');
         $query->set('orderby', 'meta_value');
     }
 }
 add_action('pre_get_posts', 'custom_guest_orderby');
+
+
+// Forcer l'enregistrement du titre de la page
+function force_page_title_save($post_id) {
+    if (get_post_type($post_id) == 'page') {
+        $post_title = get_post_meta($post_id, '_post_title', true);
+        if (!empty($post_title)) {
+            wp_update_post(array(
+                'ID' => $post_id,
+                'post_title' => $post_title
+            ));
+        }
+    }
+}
+add_action('save_post', 'force_page_title_save');

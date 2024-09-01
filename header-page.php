@@ -27,11 +27,12 @@
 wp_body_open();
 global $activate_history ;
 $activate_history = get_field('activer_lencart');
-
-$backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . ');
+$thumbnail_id = get_post_thumbnail_id();
+$thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
+$backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
 	background-size: cover;
 	filter: saturate(0.5);
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;"';
 ?>
 	<div class="menu_fixed_to_sticky absolute">
@@ -46,23 +47,15 @@ $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . 
 						</li>
 					<?php endif; ?>
 					<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-						<a href="#lieux-horaires">Lieux &amp; Horaires</a>
+						<a href="<?php the_permalink(14);?>#lieux-horaires">Lieux &amp; Horaires</a>
 					</li>
 				</ul>
 			</div>
-			<a href="#title"><h3 >B&M 07.06.2025</h3></a>
-			<a href="<?php the_permalink(16);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right"
+			<a href="<?php the_permalink(14);?>"><h3 >B&M 07.06.2025</h3></a>
+			<a href="<?php the_permalink(259);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right"
 				data-aos-duration="750" data-aos-delay="1500">Confirmez votre venue</a>
 		</nav><!-- #site-navigation -->
 	</div>
 	<header id="title" class="site-header-page d-flex align-items-center" <?=$backgroundCss;?>>
-		<!-- <div class="absolute backgroundCss_filter"></div> -->
-		<div class="container_full header-main__container">
-			<?php if(get_field('texte_au_centre_de_la_page')): 
-			echo '<div class="header-main__text" data-aos="zoom-in" data-aos-delay="1000">';
-				the_field('texte_au_centre_de_la_page');
-			echo '</div>';
-		endif; ?>
-		</div>
-
+		<div class="absolute backgroundCss_filter"></div>
 	</header><!-- #masthead -->

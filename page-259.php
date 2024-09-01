@@ -5,9 +5,12 @@ get_header($name = 'page');
 ?>
 
 <main id="primary" class="site-main px-2">
-    <section class="main_content d-flex content-center">
-        <div class="col-md-8 text-center">
-            <?php //echo do_shortcode('[contact-form-7 id="d561db0" title="Formulaire de confirmation de venue"]')
+    <section class="main_content flex-column align-items-center content-center">
+        <div class="col-md-6 my-8 text-center" data-aos="fade-up" data-aos-duration="750">
+            <?php echo the_content();?>
+        </div>
+        <div class="col-md-6 form_container text-center"data-aos="fade-up" data-aos-duration="750" data-aos-delay="500">
+            <?php 
                 acf_form(array(
                     'post_id' => 'new_post',
                     'new_post' => array(
@@ -16,6 +19,9 @@ get_header($name = 'page');
                     ),
                     'field_groups' => array(146), // L'ID du post du groupe de champs
                     'submit_value' => 'Confirmer ma venue',
+                    'updated_message' => __("Votre confirmation a bien été prise en compte.", 'acf'),
+                    'html_submit_button'  => '<input type="submit" class="button btn-confirm-coming px-4 py-2" value="%s" />',
+                    'html_submit_spinner' => '<span class="acf-spinner"></span>',
                     // 'return' => add_query_arg('submitted', 'true', get_permalink())
 
                 ));

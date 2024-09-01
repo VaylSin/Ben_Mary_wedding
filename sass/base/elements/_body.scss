@@ -78,6 +78,9 @@ main {
 		object-position: left;
 	}
 }
+.form_container {
+	width: 100%;
+}
 @for $i from 1 through 5 {
 	.gap-#{$i} {
 		gap: $i * 1rem;

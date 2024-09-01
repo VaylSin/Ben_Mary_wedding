@@ -89,7 +89,7 @@ $backgroundResaCss  = 'style="background-image: url(' . get_field('image_de_fond
                 <?php if(get_field('phrase_de_presentation_resa')): 
                     echo '<div class="resa_main_text flex-column align-items-center gap-3" data-aos="zoom-in" >';
                         echo '<p>'.get_field('phrase_de_presentation_resa').'</p>';
-                        echo' <a href="'.get_the_permalink(16).'" class="button btn-confirm-coming px-6 py-3">'.get_field('texte_du_bouton_resa').'</a>';
+                        echo' <a href="'.get_the_permalink(259).'" class="button btn-confirm-coming px-6 py-3">'.get_field('texte_du_bouton_resa').'</a>';
                     echo '</div>';
                 endif; ?>
             </div>
