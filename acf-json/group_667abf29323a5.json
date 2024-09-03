@@ -111,6 +111,56 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66d734598b6ce": {
+                    "key": "layout_66d734598b6ce",
+                    "name": "bloc_texte_simple",
+                    "label": "Bloc de texte simple",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_66d734668b6cf",
+                            "label": "Contenu",
+                            "name": "contenu_texte",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 1
+                        },
+                        {
+                            "key": "field_66d73567a7592",
+                            "label": "Animations texte",
+                            "name": "animations_texte",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_667eb622ad0f8"
+                            ],
+                            "display": "group",
+                            "layout": "table",
+                            "prefix_label": 0,
+                            "prefix_name": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66c48a3664f10": {
                     "key": "layout_66c48a3664f10",
                     "name": "bloc_spacer",
@@ -670,7 +720,7 @@
             },
             "button_label": "Ajouter un bloc",
             "min": 0,
-            "max": 10
+            "max": 20
         }
     ],
     "location": [
@@ -690,5 +740,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1724690247
+    "modified": 1725380081
 }

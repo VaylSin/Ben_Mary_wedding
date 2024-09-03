@@ -3,17 +3,32 @@
 Template Name: modèle de page standard
 */
 
-get_header();
+
+if(get_the_ID() == 26) {
+    $header_page = 'page';
+    $mt = 'my-6';
+    $confirm_from_history = true;
+} else {
+    $header_page = null;
+    $mt = null;
+    $confirm_from_history = false;
+
+}
+
+get_header($header_page);
 ?>
-// * @package mariage_ben_et_marie
-// */
-// ! Reste a gérer le header, le bloc histoire  + resa 
+
 <main id="primary" class="site-main ">
     <section class="main_content">
         <div class="">
-            <div class="title_container container_xl  text-center">
+            <div class="title_container container_xl <?=$mt;?> text-center">
                 <h1><?php the_title(); ?></h1>
             </div>
+            <?php if($header_page != null) { ?>
+                <div class="content_container container_xl  text-center">
+                    <?php the_content(); ?>
+                </div>
+            <?php } ?>
             <?php if( have_rows( 'bloc_image__texte' ) ): ?>
             <div class="block_pics-text_container  ">
                 <?php while ( have_rows( 'bloc_image__texte' ) ) : the_row();
@@ -53,6 +68,11 @@ get_header();
                             $args = [
                                 'hauteur' => get_sub_field('hauteur'),
                             ];
+                        } elseif (get_row_layout() === 'bloc_texte_simple') {
+                            $args = [
+                                'aos_args' => $aos_args,
+                                'texte' => get_sub_field('contenu_texte')
+                            ];
                         } else {
                             $args = [
                                 'aos_args' => $aos_args
@@ -67,6 +87,21 @@ get_header();
             </div>
             <?php endif; ?>
         </div>
+        <?php if($confirm_from_history) :?>
+        <section id="notre-histoire" class="history container_xl">
+            <div class="history_container my-14">
+                <div class="history_title text-center">
+                    <h3 class="mb-6">Nous espérons vous compter parmi nous !</h3>
+                    <div class="ornements_container">
+                        <hr>
+                        <a href="<?php the_permalink(259);?>" class="button btn-confirm-coming px-6 py-3">Confirmez votre venue</a>
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <?php endif;?>
     </section>
 </main><!-- #main -->
 <?php

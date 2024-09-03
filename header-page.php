@@ -31,7 +31,6 @@ $thumbnail_id = get_post_thumbnail_id();
 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
 $backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
 	background-size: cover;
-	filter: saturate(0.5);
 	background-position: top;
 	background-repeat: no-repeat;"';
 ?>
@@ -57,5 +56,5 @@ $backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
 		</nav><!-- #site-navigation -->
 	</div>
 	<header id="title" class="site-header-page d-flex align-items-center" <?=$backgroundCss;?>>
-		<div class="absolute backgroundCss_filter"></div>
+		<!-- <div class="absolute backgroundCss_filter"></div> -->
 	</header><!-- #masthead -->

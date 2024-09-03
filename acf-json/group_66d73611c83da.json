@@ -1,0 +1,45 @@
+{
+    "key": "group_66d73611c83da",
+    "title": "Notre Histoire",
+    "fields": [
+        {
+            "key": "field_66d736e68f7c7",
+            "label": "Blocs de contenu flexible (copie)",
+            "name": "blocs_de_contenu_flexible_copie",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_667abf29323a5"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "26"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1725381259
+}

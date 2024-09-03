@@ -6,7 +6,6 @@ $backgroundResaCss  = 'style="background-image: url(' . get_field('image_de_fond
 	background-size: cover;
     background-attachment: fixed;
 	background-position: top center;
-    filter: saturate(0.5);
 	background-repeat: no-repeat;"';
 ?>
 <main id="primary" class="site-main px-2">
@@ -84,7 +83,7 @@ $backgroundResaCss  = 'style="background-image: url(' . get_field('image_de_fond
     <!-- container_full -->
     <section class=" reservation_container">
         <div class="d-flex align-items-center text-center content-center" <?=$backgroundResaCss;?>>
-            <div class="absolute backgroundCss_filter"></div>
+            <!-- <div class="absolute backgroundCss_filter"></div> -->
             <div class=" ">
                 <?php if(get_field('phrase_de_presentation_resa')): 
                     echo '<div class="resa_main_text flex-column align-items-center gap-3" data-aos="zoom-in" >';

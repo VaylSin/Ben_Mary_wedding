@@ -38,14 +38,6 @@ $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . 
 		<nav id="site-navigation" class="main-navigation px-4">
 			<button class="menu-toggle" aria-controls="primary-menu"
 				aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mariage-ben-et-marie' ); ?></button>
-			<?php
-		// wp_nav_menu(
-		// 	array(
-		// 		'theme_location' => 'menu-1',
-		// 		'menu_id'        => 'primary-menu',
-		// 	)
-		// );
-		?>
 			<div class="menu-menu-1-container" >
 
 				<ul id="primary-menu" class="menu nav-menu">

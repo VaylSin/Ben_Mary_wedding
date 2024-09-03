@@ -24,11 +24,16 @@ h2, .h2 {
     font-weight: 100;
     margin-bottom: 5rem;
 }
-
+.contact  {
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 3.5rem;
+    }
+}
 h3, .h3 {
-    // font-size: 1.75rem;
-    font-size: calc((1.75 - 1) * 1.2vw + 1rem);
 
+    font-size: calc((1.75 - 1) * 1.2vw + 1rem);
     line-height: 1.4;
 }
 .main-navigation h3 {

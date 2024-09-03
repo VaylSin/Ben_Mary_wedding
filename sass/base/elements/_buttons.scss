@@ -20,13 +20,17 @@ input[type="submit"] {
 	}
 }
 .btn-confirm-coming {
-	background-color: map-get($map: $colors, $key: gold_pink);
-	color: map-get($map: $colors, $key: broken_white);
-	border: 1px solid map-get($map: $colors, $key: gold_pink);
+	background-color: map-get($map: $colors, $key: gold_pink) !important;
+	color: map-get($map: $colors, $key: broken_white) !important;
+	border: 1px solid map-get($map: $colors, $key: gold_pink) !important;
+	padding: 1rem 2rem !important;
+	font-size: 1.2rem;
 	transition: .2s;
 	&:hover {
-		background-color: darken(map-get($map: $colors, $key: sauge_green), 10%);
-		border: 1px solid darken(map-get($map: $colors, $key: sauge_green), 10%);
+		background-color: darken(map-get($map: $colors, $key: sauge_green), 10%) !important;
+		border: 1px solid darken(map-get($map: $colors, $key: sauge_green), 10%) !important;
+		color: white;
+    	cursor: pointer;
 	}
 }
 .history_title  {
