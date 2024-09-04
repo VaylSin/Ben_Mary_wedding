@@ -1462,7 +1462,6 @@ p {
   text-align: center;
   background-color: #B2BEB5;
   border: 1px solid #B2BEB5;
-  color: black !important;
   font-size: calc(0.6vw + 1rem);
 }
 
@@ -3923,6 +3922,15 @@ input[type=submit]:focus {
 .ornements_container hr {
   background-color: black;
   width: 22rem;
+}
+
+#open-modal_mairie, #open-modal_cedres {
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+#open-modal_mairie:hover, #open-modal_cedres:hover {
+  color: #B76E79;
+  cursor: pointer;
 }
 
 input[type=text],

@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 <?php 
 wp_body_open();
-global $activate_history ;
+global $activate_history;
 $activate_history = get_field('activer_lencart');
 
 $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . ');

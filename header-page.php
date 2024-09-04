@@ -25,8 +25,7 @@
 <body <?php body_class(); ?>>
 <?php 
 wp_body_open();
-global $activate_history ;
-$activate_history = get_field('activer_lencart');
+$activate_history = get_field('activer_lencart', 14);
 $thumbnail_id = get_post_thumbnail_id();
 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
 $backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
@@ -42,7 +41,7 @@ $backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
 				<ul id="primary-menu" class="menu nav-menu">
 					<?php if ($activate_history) : ?>
 						<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116">
-							<a href="#notre-histoire">Notre Histoire</a>
+							<a href="<?php the_permalink(14);?>#notre-histoire">Notre Histoire</a>
 						</li>
 					<?php endif; ?>
 					<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
@@ -55,6 +54,4 @@ $backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
 				data-aos-duration="750" data-aos-delay="1500">Confirmez votre venue</a>
 		</nav><!-- #site-navigation -->
 	</div>
-	<header id="title" class="site-header-page d-flex align-items-center" <?=$backgroundCss;?>>
-		<!-- <div class="absolute backgroundCss_filter"></div> -->
-	</header><!-- #masthead -->
+	<header id="title" class="site-header-page d-flex align-items-center" <?=$backgroundCss;?>></header><!-- #masthead -->

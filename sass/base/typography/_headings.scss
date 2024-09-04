@@ -97,7 +97,6 @@ p {
         text-align: center;
         background-color: map-get($map: $colors, $key: sauge_green);
         border: 1px solid map-get($map: $colors, $key: sauge_green);
-        color: black !important;
         font-size: calc((1.5 - 1) * 1.2vw + 1rem);
     }
 

@@ -21,18 +21,19 @@
                     'updated_message' => __("Votre confirmation a bien été prise en compte.", 'acf'),
                     'html_submit_button'  => '<input type="submit" class="button btn-confirm-coming px-4 py-2" value="%s" />',
                     'html_submit_spinner' => '<span class="acf-spinner"></span>',
-                    // 'return' => add_query_arg('submitted', 'true', get_permalink())
+                    'return' => add_query_arg('submitted', 'true', get_permalink())
 
                 ));
                 if (isset($_GET['submitted']) && $_GET['submitted'] == 'true') : ?>
                     <script type="text/javascript">
-                        // alert('Le formulaire a été soumis avec succès.');
                         Swal.fire({
-                            title: 'Error!',
-                            text: 'Do you want to continue',
-                            icon: 'error',
-                            confirmButtonText: 'Cool'
-                            })
+                            title: 'Merci !',
+                            text: 'Nous vous tiendrons informés de la suite des évenements !',
+                            icon: 'success',
+                            confirmButtonText: 'Compris !',
+                            footer: '<a href="<?php the_permalink(14);?>">Retourner à la page d\'accueil</a>'
+                        })
+                        // $('.acf-form input:submit').attr("disabled", true);
                     </script>
                 <?php endif;
             ?>

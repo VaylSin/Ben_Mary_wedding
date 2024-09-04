@@ -47,3 +47,11 @@ input[type="submit"] {
 		width: 22rem;
 	}
 }
+#open-modal_mairie, #open-modal_cedres {
+	text-decoration: underline;
+	font-size: 1.2rem;
+	&:hover {
+		color: map-get($map: $colors, $key: gold_pink);
+		cursor: pointer;
+	}
+}
