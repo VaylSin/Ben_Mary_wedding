@@ -94,6 +94,7 @@ function custom_guest_columns($columns) {
     $columns['adresse_email'] = 'Email';
     $columns['presence'] = 'Présent';
     $columns['nb_personnes'] = 'Nombre de personnes';
+    $columns['allergies'] = 'allergies alimentaires';
     return $columns;
 }
 add_filter('manage_edit-invites_columns', 'custom_guest_columns');
@@ -105,10 +106,20 @@ function custom_guest_column_content($column, $post_id) {
             echo get_post_meta($post_id, 'adresse_email', true);
             break;
         case 'presence':
-            echo get_post_meta($post_id, 'presence', true);
+            $presence = get_post_meta($post_id, 'presence', true);
+             if ($presence == 'oui') {
+                echo 'Présent';
+            } elseif ($presence == 'non') {
+                echo 'Absent';
+            } else {
+                echo 'Non spécifié';
+            }
             break;
         case 'nb_personnes':
             echo get_post_meta($post_id, 'nb_personnes', true);
+            break;
+        case 'allergies':
+            echo get_post_meta($post_id, 'allergies', true);
             break;
     }
 }
@@ -119,6 +130,7 @@ function custom_guest_sortable_columns($columns) {
     $columns['adresse_email'] = 'adresse_email';
     $columns['presence'] = 'presence';
     $columns['nb_personnes'] = 'nb_personnes';
+    $columns['allergies'] = 'allergies';
     return $columns;
 }
 add_filter('manage_edit-invites_sortable_columns', 'custom_guest_sortable_columns');
@@ -140,21 +152,74 @@ function custom_guest_orderby($query) {
     } elseif ('nb_personnes' == $orderby) {
         $query->set('meta_key', 'nb_personnes');
         $query->set('orderby', 'meta_value');
+    } elseif ('allergies' == $orderby) {
+        $query->set('meta_key', 'allergies');
+        $query->set('orderby', 'meta_value');
     }
 }
 add_action('pre_get_posts', 'custom_guest_orderby');
 
 
-// Forcer l'enregistrement du titre de la page
-function force_page_title_save($post_id) {
-    if (get_post_type($post_id) == 'page') {
-        $post_title = get_post_meta($post_id, '_post_title', true);
-        if (!empty($post_title)) {
-            wp_update_post(array(
-                'ID' => $post_id,
-                'post_title' => $post_title
-            ));
-        }
+// Ajouter un compteur de présences et d'absences dans l'admin bar
+function add_presence_counter_to_admin_bar($wp_admin_bar) {
+    if (!is_admin()) {
+        return;
     }
+
+    $args_present = array(
+        'post_type' => 'invites',
+        'meta_query' => array(
+            array(
+                'key' => 'presence',
+                'value' => 'oui',
+                'compare' => '='
+            )
+        )
+    );
+    $query_present = new WP_Query($args_present);
+    $count_present = $query_present->found_posts;
+
+    $args_absent = array(
+        'post_type' => 'invites',
+        'meta_query' => array(
+            array(
+                'key' => 'presence',
+                'value' => 'non',
+                'compare' => '='
+            )
+        )
+    );
+    $query_absent = new WP_Query($args_absent);
+    $count_absent = $query_absent->found_posts;
+
+    $args_total_presents = array(
+        'post_type' => 'invites',
+        'meta_query' => array(
+            array(
+                'key' => 'nb_personnes',
+                'value' => 'non',
+                'compare' => '='
+            )
+        )
+    );
+    $query_total_presents = new WP_Query($args_absent);
+    $count_total_presents = $query_absent->found_posts;
+
+// Calculer le nombre total de personnes présentes
+$total_personnes_presentes = 0;
+if ($query_present->have_posts()) {
+    while ($query_present->have_posts()) {
+        $query_present->the_post();
+        $nb_personnes = get_post_meta(get_the_ID(), 'nb_personnes', true);
+        $total_personnes_presentes += intval($nb_personnes);
+    }
+    wp_reset_postdata();
 }
-add_action('save_post', 'force_page_title_save');
+
+    $wp_admin_bar->add_node(array(
+        'id'    => 'presence_counter',
+        'title' => sprintf(__('Total de toutes les personnes présentes: %d (Foyers Présents : %d / Foyers Absents: %d)', 'textdomain'), $total_personnes_presentes,$count_present, $count_absent ),
+        'href'  => admin_url('edit.php?post_type=invites'),
+    ));
+}
+add_action('admin_bar_menu', 'add_presence_counter_to_admin_bar', 100);

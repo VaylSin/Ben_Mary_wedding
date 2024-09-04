@@ -8,7 +8,7 @@
             "name": "nom",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -27,7 +27,7 @@
             "name": "prenom",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -46,7 +46,7 @@
             "name": "adresse_email",
             "type": "email",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -64,7 +64,7 @@
             "name": "presence",
             "type": "select",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -211,5 +211,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1724952140
+    "modified": 1725468179
 }

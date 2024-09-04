@@ -28,14 +28,17 @@
                     <script type="text/javascript">
                         Swal.fire({
                             title: 'Merci !',
-                            text: 'Nous vous tiendrons informés de la suite des évenements !',
+                            text: 'Nous vous tiendrons informés de la suite des évenements ! Vous allez être redirigé vers la page d\'accueil',
                             icon: 'success',
                             confirmButtonText: 'Compris !',
-                            footer: '<a href="<?php the_permalink(14);?>">Retourner à la page d\'accueil</a>'
+                        }).then(() => {
+                            setTimeout(() => {
+                                window.location.href = '<?php echo get_permalink(14);?>'
+                            }, 3000);
                         })
-                        // $('.acf-form input:submit').attr("disabled", true);
                     </script>
-                <?php endif;
+                    <?php wp_redirect( get_permalink(14) );
+endif;
             ?>
         </div>
     </section>
