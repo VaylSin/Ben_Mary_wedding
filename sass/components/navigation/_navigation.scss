@@ -65,13 +65,17 @@
 		text-decoration: none;
 		color: map-get($map: $colors, $key: broken_white);
 	}
+	@media screen and (max-width: 767px) {
+		padding: 0 1rem;
+		justify-content: space-around;
+	}
 
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {

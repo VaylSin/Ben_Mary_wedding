@@ -19,4 +19,11 @@ $default-font-size: 16;
 
 .reservation_container {
 	height: 50rem;
+
+}
+.spacer_div {
+	@media screen and (max-width: 767px) {
+		display: none;
+		
+	}
 }

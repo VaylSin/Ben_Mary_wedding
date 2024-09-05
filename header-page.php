@@ -49,7 +49,7 @@ $backgroundCss = 'style="background-image: url(' .$thumbnail_url . ');
 					</li>
 				</ul>
 			</div>
-			<a href="<?php the_permalink(14);?>"><h3 >B&M 07.06.2025</h3></a>
+			<a href="<?php the_permalink(14);?>"><h3 class="header_title" >B&M 07.06.2025</h3></a>
 			<a href="<?php the_permalink(259);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right"
 				data-aos-duration="750" data-aos-delay="1500">Confirmez votre venue</a>
 		</nav><!-- #site-navigation -->

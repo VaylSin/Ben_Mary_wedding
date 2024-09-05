@@ -54,6 +54,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   height: 50rem;
 }
 
+@media screen and (max-width: 767px) {
+  .spacer_div {
+    display: none;
+  }
+}
+
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms;
 }
@@ -1393,6 +1399,12 @@ h2, .h2 {
   font-weight: 100;
   margin-bottom: 5rem;
 }
+@media screen and (max-width: 768px) {
+  h2, .h2 {
+    font-size: 3rem;
+    margin: 3rem 0 1.5rem 0;
+  }
+}
 
 .contact h3 {
   text-transform: uppercase;
@@ -1403,6 +1415,16 @@ h2, .h2 {
 h3, .h3 {
   font-size: calc(0.9vw + 1rem);
   line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+  h3, .h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  h3.header_title, .h3.header_title {
+    font-size: 1.3rem;
+  }
 }
 
 .main-navigation h3 {
@@ -1441,11 +1463,6 @@ p {
   font-size: 1.5rem;
   line-height: 1.7;
   margin-bottom: 1rem;
-}
-@media screen and (max-width: 768px) {
-  p {
-    font-size: 1.2rem;
-  }
 }
 
 .resa_main_text {
@@ -3777,6 +3794,16 @@ main {
 .site-footer a:hover {
   color: #B76E79;
 }
+@media screen and (max-width: 767px) {
+  .site-footer a {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-footer {
+    flex-direction: column;
+  }
+}
 
 .acf-field .acf-label label {
   text-align: start;
@@ -3800,9 +3827,42 @@ main {
   padding: 0 10px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+  .acf-col-50 {
+    max-width: 100%;
+    width: 100% !important;
+  }
+}
 
 .acf-fields > .acf-field {
   border: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .block_text {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block_text-pics .block_text {
+    order: 2;
+  }
+  .block_text-pics .block_pics {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pic-rounded .block_pics {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .history_title h2 {
+    font-size: 2rem;
+  }
 }
 
 hr {
@@ -3926,6 +3986,12 @@ input[type=submit]:focus {
   color: white;
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  .btn-confirm-coming {
+    text-align: center;
+    padding: 0.5rem 1rem !important;
+  }
+}
 
 .history_title a {
   font-size: 1.5rem;
@@ -3939,6 +4005,16 @@ input[type=submit]:focus {
 .ornements_container hr {
   background-color: black;
   width: 22rem;
+}
+@media screen and (max-width: 767px) {
+  .ornements_container hr {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ornements_container {
+    justify-content: center;
+  }
 }
 
 #open-modal_mairie, #open-modal_cedres {
@@ -4081,11 +4157,17 @@ header.site-header-page {
   text-decoration: none;
   color: #FAF3E0;
 }
+@media screen and (max-width: 767px) {
+  .main-navigation {
+    padding: 0 1rem;
+    justify-content: space-around;
+  }
+}
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block;
+  display: none;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -4258,7 +4340,7 @@ header.site-header-page {
   width: 100%;
   object-position: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .static-banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

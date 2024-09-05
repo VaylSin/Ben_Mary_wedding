@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const maxScroll = 600; // Ajustez cette valeur selon vos besoins
         const opacity = 1 - Math.min((scrolled / 1.5) / maxScroll, 1);
         header.style.opacity = opacity;
-
-        // Ajouter ou supprimer la classe sticky_menu
-        if (scrolled > 150) {
-            mainNavigation.classList.add('sticky_menu');
-        } else {
-            mainNavigation.classList.remove('sticky_menu');
+        const width = window.innerWidth;
+        // gère le menu sticky si on est sur un device supéieur à 768px
+        if(width > 767){
+            if (scrolled > 150) {
+                mainNavigation.classList.add('sticky_menu');
+            } else {
+                mainNavigation.classList.remove('sticky_menu');
+            }
         }
     });
     const presenceField = document.getElementById('acf-field_66d08675f56b6');

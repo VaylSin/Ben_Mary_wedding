@@ -211,6 +211,14 @@ main {
 		&:hover {
 			color: map-get($map: $colors, $key: gold_pink);
 		}
+		@media screen and (max-width: 767px) {
+			margin-bottom: 2rem;
+			
+		}
+	}
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		
 	}
 }
 
@@ -237,7 +245,42 @@ main {
 	max-width: 50%;
 	padding: 0 10px;
 	box-sizing: border-box;
+	@media screen and (max-width: 767px) {
+		max-width: 100%;
+		width: 100% !important;
+		
+	}
 }
 .acf-fields>.acf-field {
 	border: none !important;
+}
+.block_text {
+	@media screen and (max-width: 767px) {
+		margin: 2rem 0;
+	}
+}
+.block_text-pics {
+	@media screen and (max-width: 768px) {
+		.block_text {
+			order: 2;
+		}
+		.block_pics {
+			order:1
+		}
+	}
+}
+.pic-rounded {
+	.block_pics {
+	@media screen and (max-width: 768px) {
+			width: 70%;
+		}
+	}
+
+}
+.history_title {
+	h2 {
+		@media screen and (max-width: 767px) {
+			font-size: 2rem;
+		}
+	}
 }

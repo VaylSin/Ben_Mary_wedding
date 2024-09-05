@@ -21,7 +21,6 @@ session_start();
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tokenExists = <?php echo isset($_SESSION['token']) ? 'true' : 'false'; ?>;
-			console.log(tokenExists);
 
             if (!tokenExists) {
                 const date_mariage = '07/06/2025';
@@ -70,7 +69,7 @@ $backgroundCss = 'style="background-image: url(' . get_field('image_de_fond') . 
 					</li>
 				</ul>
 			</div>
-			<a href="#title"><h3 >B&M 07.06.2025</h3></a>
+			<a href="#title"><h3 class="header_title">B&M 07.06.2025</h3></a>
 			<a href="<?php the_permalink(259);?>" class="button btn-confirm-coming px-4 py-2" data-aos="fade-right"
 				data-aos-duration="750" data-aos-delay="1500">Confirmez votre venue</a>
 		</nav><!-- #site-navigation -->

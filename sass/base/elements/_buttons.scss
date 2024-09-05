@@ -32,6 +32,11 @@ input[type="submit"] {
 		color: white;
     	cursor: pointer;
 	}
+	@media screen and (max-width: 767px) {
+		text-align: center;
+		padding: 0.5rem 1rem !important;
+		
+	}
 }
 .history_title  {
 	a {
@@ -45,6 +50,14 @@ input[type="submit"] {
 	hr {
 		background-color: black;
 		width: 22rem;
+		@media screen and (max-width: 767px) {
+			display: none;
+			
+		}
+	}
+	@media screen and (max-width: 767px) {
+		justify-content: center;
+		
 	}
 }
 #open-modal_mairie, #open-modal_cedres {
