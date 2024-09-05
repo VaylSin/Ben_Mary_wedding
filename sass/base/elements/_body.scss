@@ -22,7 +22,7 @@ main {
 .d-flex {
 	display: flex;
 	flex-direction: row;
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		flex-direction: column;
 	}
 
@@ -172,13 +172,19 @@ main {
 			}
 		}
 	}
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		@for $i from 1 through $grid-columns {
 			.col-#{$breakpoint}-#{$i} {
-			flex: 0 0 100%;
-			max-width: 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
 			}
 		}
+	}
+}
+.col-md-7 {
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		flex: 0 0 50%;
+		max-width: 50%;
 	}
 }
 // Gestion de align-items
@@ -259,8 +265,13 @@ main {
 		margin: 2rem 0;
 	}
 }
+.block_pics-text, .block_text-pics {
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		justify-content: space-evenly;
+	}
+}
 .block_text-pics {
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		.block_text {
 			order: 2;
 		}

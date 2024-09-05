@@ -52,12 +52,14 @@ input[type="submit"] {
 		width: 22rem;
 		@media screen and (max-width: 767px) {
 			display: none;
-			
+		}
+		@media screen and (min-width:768px) and (max-width: 992px) {
+			width: 15rem;
 		}
 	}
 	@media screen and (max-width: 767px) {
 		justify-content: center;
-		
+
 	}
 }
 #open-modal_mairie, #open-modal_cedres {

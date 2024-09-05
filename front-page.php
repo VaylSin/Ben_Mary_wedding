@@ -56,7 +56,7 @@ $hotel_location = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!
                                 'aos_args' => $aos_args
                             ];
                         }
-                        $class_container = (get_row_layout() === 'banderole_images_statiques') ? null : 'container_xl';
+                        $class_container = (get_row_layout() === 'banderole_images_statiques') ? 'd-flex' : 'container_xl';
                         echo '<div class="'.$class_container.' ">';
                             get_template_part('template-parts/layout_block', get_row_layout(), $args);
                         echo '</div>';

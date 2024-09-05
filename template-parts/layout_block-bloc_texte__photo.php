@@ -13,7 +13,7 @@ $dataAosText = '';
         echo '<div class="block_text text-end col-md-5 px-6" '.$dataAosText.' >';
             the_sub_field('contenu_texte');
         echo '</div>';
-        echo '<div class="block_pics d-flex content-end col-md-7" >';
+        echo '<div class="block_pics d-flex content-end  col-md-7 col-sm-6" >';
             $image = get_sub_field('photo');
                 if( $image ) {
                     echo '<img src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" '.$dataAosImage.'>';

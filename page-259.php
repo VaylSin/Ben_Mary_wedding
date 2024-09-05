@@ -5,10 +5,10 @@ get_header($name = 'page');
 
 <main id="primary" class="site-main contact px-2">
     <section class="main_content flex-column align-items-center content-center">
-        <div class="col-md-6 my-8 text-center" data-aos="fade-up" data-aos-duration="750">
+        <div class="col-md-8 my-8 text-center" data-aos="fade-up" data-aos-duration="750">
             <?php echo the_content();?>
         </div>
-        <div class="col-md-6 form_container text-center" data-aos="fade-up" data-aos-duration="750" data-aos-delay="500">
+        <div class="col-md-8 form_container text-center" data-aos="fade-up" data-aos-duration="750" data-aos-delay="500">
             <?php 
             acf_form(array(
                 'post_id' => 'new_post',

@@ -78,7 +78,7 @@ get_header($header_page);
                                 'aos_args' => $aos_args
                             ];
                         }
-                        $class_container = (get_row_layout() === 'banderole_images_statiques') ? null : 'container_xl';
+                        $class_container = (get_row_layout() === 'banderole_images_statiques') ? 'd-flex' : 'container_xl';
                         echo '<div class="'.$class_container.' ">';
                             get_template_part('template-parts/layout_block', get_row_layout(), $args);
                         echo '</div>';

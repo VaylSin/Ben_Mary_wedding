@@ -2,9 +2,18 @@ header {
     width: 100%;
     .header-main__text {
         color: white;
+        h1 {
+            @media screen and (max-width: 767px) {
+                font-size: 3rem;    
+            }
+        }
     }
     &.site-header {
         height: 100vh;
+        @media screen and (max-width: 767px) {
+            flex-direction: row;
+            
+        }
     }
     &.site-header-page {
         height: 50vh;
