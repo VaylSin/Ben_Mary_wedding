@@ -11,8 +11,8 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "acf-col-50",
                 "id": ""
             },
             "default_value": "",
@@ -30,8 +30,8 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "acf-col-50",
                 "id": ""
             },
             "default_value": "",
@@ -59,6 +59,32 @@
             "append": ""
         },
         {
+            "key": "field_66d97447dd3ed",
+            "label": "Vous êtes convié(e) à :",
+            "name": "invitation_repas",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "acf-col-50",
+                "id": ""
+            },
+            "choices": {
+                "vin": "Vin d'honneur",
+                "vin_repas": "Vin d'honneur + repas",
+                "vin_repas_brunch": "Vin d'honneur + repas + brunch"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_66d08675f56b6",
             "label": "Confirmez vous votre venue ?",
             "name": "presence",
@@ -67,8 +93,8 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "acf-col-50",
                 "id": ""
             },
             "choices": {
@@ -92,8 +118,8 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "acf-col-50",
                 "id": ""
             },
             "default_value": "",
@@ -113,19 +139,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "acf-col-50",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "Laisser vide si aucune",
             "prepend": "",
             "append": "",
             "maxlength": ""
         },
         {
             "key": "field_66d07b73e9b17",
-            "label": "Morceau pour la playlist",
+            "label": "Votre morceau pour la playlist",
             "name": "morceau_playlist",
             "type": "text",
             "instructions": "",
@@ -211,5 +237,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1725468179
+    "modified": 1725528591
 }

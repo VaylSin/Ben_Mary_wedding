@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialiser AOS
     AOS.init();
-    // const { value: date } =  Swal.fire({
-    //     title: "Quelle est la date du mariage ?",
-    //     input: "date",
-    //     didOpen: () => {
-    //         const today = (new Date()).toISOString();
-    //         Swal.getInput().min = today.split("T")[0];
-    //     }
-    // });
-    // if (date) {
-    //     Swal.fire("Departure date", date);
-    // }
 
     window.addEventListener('scroll', function () {
         const mainNavigation = document.querySelector('.main-navigation');

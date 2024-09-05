@@ -3780,12 +3780,29 @@ main {
 
 .acf-field .acf-label label {
   text-align: start;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 100 !important;
 }
 .acf-field input, .acf-field select {
   padding: 0.5rem !important;
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
+}
+
+.acf-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.acf-col-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.acf-fields > .acf-field {
+  border: none !important;
 }
 
 hr {

@@ -91,8 +91,8 @@ function generate_and_save_password($post_id) {
 
 // Ajouter des colonnes personnalisées
 function custom_guest_columns($columns) {
-    $columns['adresse_email'] = 'Email';
     $columns['presence'] = 'Présent';
+    $columns['invitation_repas'] = 'Pour';
     $columns['nb_personnes'] = 'Nombre de personnes';
     $columns['allergies'] = 'allergies alimentaires';
     return $columns;
@@ -102,8 +102,15 @@ add_filter('manage_edit-invites_columns', 'custom_guest_columns');
 // Remplir les colonnes personnalisées
 function custom_guest_column_content($column, $post_id) {
     switch ($column) {
-        case 'adresse_email':
-            echo get_post_meta($post_id, 'adresse_email', true);
+        case 'invitation_repas':
+            $repas = get_post_meta($post_id, 'invitation_repas', true);
+            if($repas == 'vin') {
+                echo 'Vin d\'honneur';
+            } elseif($repas == 'vin_repas') {
+                echo 'Vin d\'honneur et repas';
+            } else {
+                echo 'Formule complète';
+            }
             break;
         case 'presence':
             $presence = get_post_meta($post_id, 'presence', true);
@@ -127,7 +134,7 @@ add_action('manage_invites_posts_custom_column', 'custom_guest_column_content', 
 
 // Rendre les colonnes triables
 function custom_guest_sortable_columns($columns) {
-    $columns['adresse_email'] = 'adresse_email';
+    $columns['invitation_repas'] = 'invitation_repas';
     $columns['presence'] = 'presence';
     $columns['nb_personnes'] = 'nb_personnes';
     $columns['allergies'] = 'allergies';
@@ -143,8 +150,8 @@ function custom_guest_orderby($query) {
 
     $orderby = $query->get('orderby');
 
-  	if ('adresse_email' == $orderby) {
-        $query->set('meta_key', 'adresse_email');
+  	if ('invitation_repas' == $orderby) {
+        $query->set('meta_key', 'invitation_repas');
         $query->set('orderby', 'meta_value');
     } elseif ('presence' == $orderby) {
         $query->set('meta_key', 'presence');

@@ -8,7 +8,7 @@
  *
  * @package mariage_ben_et_marie
  */
-
+session_start();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -17,8 +17,27 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<meta name="robots" content="noindex">
+	<meta name="robots" content="noindex, nofollow">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tokenExists = <?php echo isset($_SESSION['token']) ? 'true' : 'false'; ?>;
+			console.log(tokenExists);
 
+            if (!tokenExists) {
+                const date_mariage = '07/06/2025';
+
+                let reponse;
+                while (reponse !== date_mariage) {
+                    reponse = prompt('Avant toute chose, quelle est la date du mariage (format jj/mm/aaaa) ?', date_mariage);
+                    if (reponse === date_mariage) {
+                        alert('Bravo...et Bienvenue !');
+                       	<?php $_SESSION['token'] = true; ?> 
+                        tokenExists = true;
+                    }
+                }
+            }
+        });
+    </script>
 	<?php wp_head(); ?>
 </head>
 
